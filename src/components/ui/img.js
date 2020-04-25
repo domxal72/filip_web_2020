@@ -4,11 +4,10 @@ import {
   space,
 } from 'styled-system';
 
-import { Box } from './box'
-
 export const Img = styled('img')`
   ${layout}
   ${space}
+  cursor: ${({ cursor }) => cursor ? cursor : 'auto'};
 `
 
 Img.defaultProps = {

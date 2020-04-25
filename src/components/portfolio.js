@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Flex } from './ui/flex';
+
+import { AppContext } from './app-context'
 
 import Lundegard from './img-sections/lundegard'
 import Ecosond from './img-sections/ecosond'
@@ -10,9 +12,12 @@ import Hello from './img-sections/hello'
 import Book from './img-sections/book'
 import Rest from './img-sections/rest'
 
-function Portfolio({ state }) {
+export default function Portfolio() {
+
+  const { appState: { visiblePortfolio } } = useContext(AppContext)
+
   return (
-    <Flex flexDirection='column' display={state.visiblePortfolio ? 'flex' : 'none'}>
+    <Flex flexDirection='column' display={visiblePortfolio ? 'flex' : 'none'}>
       <Lundegard />
       <Ecosond />
       <Revma />
@@ -24,4 +29,3 @@ function Portfolio({ state }) {
   )
 }
 
-export default Portfolio

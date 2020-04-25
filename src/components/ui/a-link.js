@@ -14,7 +14,7 @@ export const ALink = styled('a')`
   ${position}
   ${border}
   text-decoration: ${({ textDecoration }) => textDecoration ? textDecoration : 'none'};
-  cursor: ${({ cursor }) => cursor ? cursor : 'pointer'};;
+  cursor: ${({ cursor }) => cursor ? cursor : 'pointer'};
 `
 
 ALink.defaultProps = {

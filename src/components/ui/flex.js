@@ -29,8 +29,10 @@ export const FlexImgRow = styled(Flex)``
 FlexImgRow.defaultProps = {
   mb: imgRowGap,
   width: '100%',
-  flexWrap: ['wrap', 'nowrap'],
-  justifyContent: ['center', 'initial'],
+  // flexWrap: ['wrap', 'wrap', 'nowrap'],
+  flexDirection: ['column', 'row', 'row'],
+  justifyContent: ['center', 'initial', 'initial'],
+  alignItems: ['center', 'initial', 'initial'],
 }
 
 

@@ -13,6 +13,7 @@ export const Box = styled('div')`
   ${space}
   ${position}
   ${border}
+  cursor: ${({ cursor }) => cursor ? cursor : 'auto'};
 `
 
 Box.defaultProps = {

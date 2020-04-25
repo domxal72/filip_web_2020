@@ -1,10 +1,5 @@
 import React from 'react';
 
-import styled from 'styled-components';
-import {
-  flexbox,
-} from 'styled-system';
-
 import { Flex } from './flex'
 
 export default function Svg({ children, ...props }) {

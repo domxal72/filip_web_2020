@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { GlobalStyle } from './components/global-styles';
-import Header from './components/header';
-import Main from './components/main';
+import Content from './components/content';
 import { theme } from './components/theme';
 
-function App() {
-  const initialState = {
-    visibleContact: false,
-    visiblePortfolio: true,
-    navToggle: true,
-  }
+import AppProvider, { AppContext } from './components/app-context';
 
-  const [state, setState] = useState(initialState);
+function App() {
 
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Router>
-          <Header state={state} setState={setState} />
-          <Main state={state} setState={setState} />
-        </Router>
-      </ThemeProvider>
+      <AppProvider>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <Content />
+          </Router>
+        </ThemeProvider>
+      </AppProvider>
     </div>
   );
 }

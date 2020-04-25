@@ -11,6 +11,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Roboto;
-    background-color: ${colors.pageBg};
+    background-color: ${ ({ bgGray }) => bgGray ? colors.pageBg : colors.white};
   }
 `

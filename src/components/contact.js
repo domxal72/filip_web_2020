@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from 'react'
+import styled from 'styled-components'
 
 import { Flex } from './ui/flex'
 import { Text } from './ui/text'
@@ -16,50 +17,96 @@ import web2011 from '../img/link_02.jpg'
 import web2004 from '../img/link_03.jpg'
 import decoded from '../img/link_04.jpg'
 
-function Contact() {
+const WebCol = styled(Flex).attrs(() => ({
+  flexDirection: 'column',
+  alignItems: 'center',
+  mr: [30],
+  mb: [25],
+}))``
+
+export default function Contact() {
 
   const { appState: { visibleContact }, showDetail } = useContext(AppContext)
 
   return (
-    <Flex display={visibleContact ? 'flex' : 'none'}>
-      <Flex flex={1} width='50%'>
+    <Flex
+      display={visibleContact ? 'flex' : 'none'}
+      alignItems={['center', 'flex-start']}
+      flexDirection={['column', 'row']}
+    >
+      <Flex
+        flex={1}
+        mb={[40]}
+        px={[20]}
+        width={['100%', '50%']}
+        maxWidth={[450, 'none']}
+        alignItems={['center', 'flex-start']}
+      >
         <Img src={xicht} />
       </Flex>
-      <Flex flex={1} width='50%'>
-        <Flex flexDirection='column' maxWidth='100%'>
-          <FwLogoMain mb={60} maxWidth='100%' />
-          <Text>
+      <Flex flex={1} width={['100%', '50%']} justifyContent='center'>
+        <Flex
+          flexDirection='column'
+          maxWidth='100%'
+          alignItems={['center', 'flex-start']}
+          alignItems={['center', 'flex-start']}
+        >
+          <FwLogoMain mb={60} alignItems='flex-start' maxWidth={[450, 618]} />
+          <Text mb={[30]} fontSize={[16]}>
             Filip Walter
           </Text>
-          <Text>
-            E-mail: <ALink href="mailto:filip@filipwalter.cz">filip@filipwalter.cz</ALink>
-          </Text>
-          <Text>
-            Mobile: <ALink href="tel:+420737060620">737 060 620</ALink>
-          </Text>
-          <Flex>
-            <Button>
-              <Text>Download CV</Text>
-            </Button>
+          <Flex mb={[30]} flexDirection='column'>
+            <Flex mb={[15]}>
+              <Text width={[65]} fontSize={[16]}>
+                E-mail:
+              </Text>
+              <Text fontSize={[16]}>
+                <ALink href="mailto:filip@filipwalter.cz">filip@filipwalter.cz</ALink>
+              </Text>
+            </Flex>
+            <Flex mb={[15]}>
+              <Text width={[65]} fontSize={[16]}>
+                Mobile:
+              </Text>
+              <Text fontSize={[16]}>
+                <ALink href="tel:+420737060620">737 060 620</ALink>
+              </Text>
+            </Flex>
           </Flex>
           <Flex>
-            <Flex mr={40}>
-              <Img src={web2018} cursor='pointer' />
-            </Flex>
-            <Flex mr={40}>
-              <Img src={web2011} data-detail='0' onClick={showDetail} cursor='pointer' />
-            </Flex>
-            <Flex mr={40}>
-              <Img src={web2004} data-detail='1' onClick={showDetail} cursor='pointer' />
-            </Flex>
-            <Flex>
-              <Img src={decoded} data-detail='2' onClick={showDetail} cursor='pointer' />
-            </Flex>
+            <Button mb={[80]}>
+              <Text fontSize={[16]}>Download CV</Text>
+            </Button>
+          </Flex>
+          <Flex
+            flexDirection={['row']}
+            flexWrap={['wrap']}
+            width='100%'
+            alignItems={['flex-start']}
+            justifyContent={['center', 'flex-start']}
+          >
+            <WebCol>
+              <Img src={web2018} cursor='pointer' mb={10} />
+              <Text lineHeight={1.2}>2018</Text>
+            </WebCol>
+            <WebCol>
+              <Img src={web2011} data-detail='0' onClick={showDetail} cursor='pointer' mb={10} />
+              <Text lineHeight={1.2}>2011</Text>
+              <Text color={colors.textSmall}>(Flash Website)</Text>
+            </WebCol>
+            <WebCol>
+              <Img src={web2004} data-detail='1' onClick={showDetail} cursor='pointer' mb={10} />
+              <Text lineHeight={1.2}>2004</Text>
+              <Text color={colors.textSmall}>(Flash Website)</Text>
+            </WebCol>
+            <WebCol>
+              <Img src={decoded} data-detail='2' onClick={showDetail} cursor='pointer' mb={10} />
+              <Text lineHeight={1.2}>Decoded</Text>
+              <Text color={colors.textSmall}>(Flash Website)</Text>
+            </WebCol>
           </Flex>
         </Flex>
       </Flex>
     </Flex>
   )
 }
-
-export default Contact

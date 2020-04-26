@@ -18,5 +18,6 @@ export const colors = {
   pageBg: '#f2f2f2',
   activeTab: '#4b4b4b',
   tab: '#000000',
-  hoverTab: '#333333'
+  hoverTab: '#333333',
+  textSmall: '#818181',
 }

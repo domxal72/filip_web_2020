@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Modal from 'react-modal';
 
+import { Flex } from './ui/flex';
 import { Img } from './ui/img';
 
 import { GlobalStyle } from './global-styles';
@@ -15,8 +16,26 @@ function Content() {
 
   const modalStyles = {
     overlay: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
       zIndex: 20,
       backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    },
+    content: {
+      position: 'relative',
+      margin: '20px',
+      padding: 0,
+      border: 'none',
+      maxWidth: '100%',
+      maxHeight: '100%',
+      width: 'auto',
+      display: 'flex',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
     }
   }
 
@@ -30,9 +49,9 @@ function Content() {
         onRequestClose={closeModal}
         style={modalStyles}
       >
-        <div onClick={closeModal}>
+        <Flex onClick={closeModal} borderRadius={5} >
           <Img src={modalArr[modalDetail]} />
-        </div>
+        </Flex>
       </Modal>
     </>
   )

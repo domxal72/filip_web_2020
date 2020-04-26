@@ -17,10 +17,10 @@ import web2011 from '../img/link_02.jpg'
 import web2004 from '../img/link_03.jpg'
 import decoded from '../img/link_04.jpg'
 
-const WebCol = styled(Flex).attrs(() => ({
+const WebCol = styled(Flex).attrs(({ mr = [30] }) => ({
   flexDirection: 'column',
   alignItems: 'center',
-  mr: [30],
+  mr: mr,
   mb: [25],
 }))``
 
@@ -89,7 +89,7 @@ export default function Contact() {
               <Img src={web2018} cursor='pointer' mb={10} />
               <Text lineHeight={1.2}>2018</Text>
             </WebCol>
-            <WebCol>
+            <WebCol mr={[0, 30]}>
               <Img src={web2011} data-detail='0' onClick={showDetail} cursor='pointer' mb={10} />
               <Text lineHeight={1.2}>2011</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>
@@ -99,7 +99,7 @@ export default function Contact() {
               <Text lineHeight={1.2}>2004</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>
             </WebCol>
-            <WebCol>
+            <WebCol mr={[0, 30]}>
               <Img src={decoded} data-detail='2' onClick={showDetail} cursor='pointer' mb={10} />
               <Text lineHeight={1.2}>Decoded</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>

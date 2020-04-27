@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SectionContainer from './section-container'
-import { Flex, FlexImgRow, FlexImgCol, FlexSecCol } from '../ui/flex'
+import { Flex, FlexImgRow, FlexImgCol, FlexSecCol, FlexImgRowMain } from '../ui/flex'
 import { Img } from '../ui/img'
 
 import { img } from '../img-list'
@@ -23,11 +23,11 @@ export default function Sklizeno() {
   return (
     <SectionContainer>
       <FlexSecCol>
-        <FlexImgRow>
+        <FlexImgRowMain>
           <FlexImgCol>
             <Img src={i24_A} />
           </FlexImgCol>
-        </FlexImgRow>
+        </FlexImgRowMain>
         <FlexImgRow>
           <FlexImgCol mr={imgColGap}>
             <Img src={i25} />
@@ -44,10 +44,10 @@ export default function Sklizeno() {
         <FlexImgRow>
           <FlexImgCol mr={imgColGap}>
             <Flex flexDirection='column'>
-              <FlexImgCol mb={imgRowGap}>
+              <FlexImgCol>
                 <Img src={i28} />
               </FlexImgCol>
-              <FlexImgCol>
+              <FlexImgCol mb={imgRowGap}>
                 <Img src={i29} />
               </FlexImgCol>
             </Flex>

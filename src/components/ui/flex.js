@@ -6,7 +6,7 @@ import {
 import { Box } from './box'
 import { theme } from '../theme'
 
-const { imgRowGap, imgBottomGap } = theme
+const { imgRowGap, imgRowMainGap, imgBottomGap } = theme
 
 export const Flex = styled(Box)`
   ${flexbox}
@@ -29,10 +29,9 @@ export const FlexImgRow = styled(Flex)``
 FlexImgRow.defaultProps = {
   mb: imgRowGap,
   width: '100%',
-  // flexWrap: ['wrap', 'wrap', 'nowrap'],
   flexDirection: ['column', 'row', 'row'],
-  justifyContent: ['center', 'initial', 'initial'],
-  alignItems: ['center', 'initial', 'initial'],
+  justifyContent: ['center', 'flex-start', 'flex-start'],
+  alignItems: ['center', 'flex-start', 'flex-start'],
 }
 
 
@@ -40,4 +39,10 @@ export const FlexImgCol = styled(Flex)``
 
 FlexImgCol.defaultProps = {
   mb: imgBottomGap,
+  alignItems: ['center', 'flex-start', 'flex-start'],
 }
+
+export const FlexImgRowMain = styled(FlexImgRow).attrs(() => ({
+  justifyContent: 'center',
+  mb: imgRowMainGap
+}))``

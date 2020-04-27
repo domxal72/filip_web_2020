@@ -17,6 +17,8 @@ import web2011 from '../img/link_02.jpg'
 import web2004 from '../img/link_03.jpg'
 import decoded from '../img/link_04.jpg'
 
+import cv from '../files/filip-walter-cv.pdf'
+
 const WebCol = styled(Flex).attrs(({ mr = [30] }) => ({
   flexDirection: 'column',
   alignItems: 'center',
@@ -49,10 +51,9 @@ export default function Contact() {
           flexDirection='column'
           maxWidth='100%'
           alignItems={['center', 'flex-start']}
-          alignItems={['center', 'flex-start']}
         >
           <FwLogoMain mb={60} alignItems='flex-start' maxWidth={[450, 618]} />
-          <Text mb={[30]} fontSize={[16]}>
+          <Text mb={[30]} fontSize={[16]} fontWeight={[600]}>
             Filip Walter
           </Text>
           <Flex mb={[30]} flexDirection='column'>
@@ -75,7 +76,7 @@ export default function Contact() {
           </Flex>
           <Flex>
             <Button mb={[80]}>
-              <Text fontSize={[16]}>Download CV</Text>
+              <Text fontSize={[16]}><ALink href={cv} target='_blank'>Download CV</ALink></Text>
             </Button>
           </Flex>
           <Flex

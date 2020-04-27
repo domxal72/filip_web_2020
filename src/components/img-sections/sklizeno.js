@@ -44,7 +44,7 @@ export default function Sklizeno() {
         <FlexImgRow>
           <FlexImgCol mr={imgColGap}>
             <Flex flexDirection='column'>
-              <FlexImgCol>
+              <FlexImgCol mb={imgRowGap}>
                 <Img src={i28} />
               </FlexImgCol>
               <FlexImgCol mb={imgRowGap}>

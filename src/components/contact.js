@@ -75,9 +75,11 @@ export default function Contact() {
             </Flex>
           </Flex>
           <Flex>
-            <Button mb={[80]}>
-              <Text fontSize={[16]}><ALink href={cv} target='_blank'>Download CV</ALink></Text>
-            </Button>
+            <ALink href={cv} target='_blank'>
+              <Button mb={[80]}>
+                <Text fontSize={[16]} cursor='pointer'>Download CV</Text>
+              </Button>
+            </ALink>
           </Flex>
           <Flex
             flexDirection={['row']}

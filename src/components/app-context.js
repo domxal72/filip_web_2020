@@ -37,6 +37,7 @@ export default function AppProvider(props) {
       visiblePortfolio: false,
       bgGray: false,
     })
+    window.scrollTo(0, 0)
   }
 
   const openModal = () => {

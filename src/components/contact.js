@@ -18,11 +18,12 @@ import web2004 from '../img/link_03.jpg'
 import decoded from '../img/link_04.jpg'
 
 import cv from '../files/filip-walter-cv.pdf'
+// import webLink from '../web-2018/index.html'
 
-const WebCol = styled(Flex).attrs(({ mr = [30] }) => ({
+const WebCol = styled(Flex).attrs(() => ({
   flexDirection: 'column',
   alignItems: 'center',
-  mr: mr,
+  mx: 15,
   mb: [25],
 }))``
 
@@ -87,12 +88,15 @@ export default function Contact() {
             width='100%'
             alignItems={['flex-start']}
             justifyContent={['center', 'flex-start']}
+            ml={[0, -15]}
           >
             <WebCol>
-              <Img src={web2018} cursor='pointer' mb={10} />
+              <ALink href='' target='_blank'>
+                <Img src={web2018} cursor='pointer' mb={10} />
+              </ALink>
               <Text lineHeight={1.2}>2018</Text>
             </WebCol>
-            <WebCol mr={[0, 30]}>
+            <WebCol>
               <Img src={web2011} data-detail='0' onClick={showDetail} cursor='pointer' mb={10} />
               <Text lineHeight={1.2}>2011</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>
@@ -102,7 +106,7 @@ export default function Contact() {
               <Text lineHeight={1.2}>2004</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>
             </WebCol>
-            <WebCol mr={[0, 30]}>
+            <WebCol>
               <Img src={decoded} data-detail='2' onClick={showDetail} cursor='pointer' mb={10} />
               <Text lineHeight={1.2}>Decoded</Text>
               <Text color={colors.textSmall}>(Flash Website)</Text>

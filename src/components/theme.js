@@ -20,6 +20,6 @@ export const colors = {
   pageBg: '#f2f2f2',
   activeTab: '#000000',
   tab: '#4b4b4b',
-  hoverTab: '#3a3a3a',
+  hoverTab: '#333333',
   textSmall: '#818181',
 }

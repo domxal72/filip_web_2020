@@ -38,7 +38,6 @@ export default function Contact() {
       flexDirection={['column', 'row']}
     >
       <Flex
-        // flex={1}
         mb={[40]}
         pl={[20]}
         pr={[20, 40, 100]}
@@ -51,14 +50,17 @@ export default function Contact() {
         <Img src={xicht} />
       </Flex>
       <Flex
-        // flex={1}
-        width={['100%', '50%']} justifyContent='center' pt={50} flexDirection='column'>
+        width={['100%', '50%']}
+        justifyContent={['center']}
+        pt={[20, 50]}
+        flexDirection='column'
+      >
         <Flex
           flexDirection='column'
           maxWidth='100%'
           alignItems={['center', 'flex-start']}
         >
-          <Flex width='100%' justifyContent='center'>
+          <Flex width='100%' justifyContent={['center', 'flex-start']}>
             <FwLogoMain mb={60} alignItems='flex-start' maxWidth={[450, 618]} />
           </Flex>
           <Text mb={[30]} fontSize={[16]} fontWeight={[600]}>

@@ -1,4 +1,4 @@
-const sm = 768
+const sm = 770
 const lg = 1500
 const xl = 1900
 const breakpoints = [sm, lg, xl]

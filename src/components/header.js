@@ -12,7 +12,7 @@ import FwLogoHeader from '../img/fw-logo-header'
 import LinkChevron from '../img/link-chevron'
 
 const FlexNav = styled(Flex).attrs(({ justifyContent = 'space-between' }) => ({
-  flex: 1,
+  width: '50%',
   minHeight: 60,
   justifyContent: justifyContent,
   alignItems: 'center',

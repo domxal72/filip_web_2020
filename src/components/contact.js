@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import { Flex } from './ui/flex'
 import { Text } from './ui/text'
@@ -100,9 +101,9 @@ export default function Contact() {
             ml={[0, -15]}
           >
             <WebCol>
-              <ALink href='' target='_blank'>
+              <Link to='/web-2018' target='_blank'>
                 <Img src={web2018} cursor='pointer' mb={10} />
-              </ALink>
+              </Link>
               <Text lineHeight={1.2}>2018</Text>
             </WebCol>
             <WebCol>

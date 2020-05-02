@@ -1,0 +1,401 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* // CSS RESET END // */
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background: #fff; }
+
+a {
+  color: #000; }
+
+li {
+  width: 100%; }
+
+.image-list-item {
+  cursor: pointer; }
+
+.header-container {
+  height: 60px;
+  position: relative; }
+
+header {
+  position: fixed;
+  width: 100%;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-basis: 50%; }
+
+header > a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 22px;
+  background: #008bbf;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background ease 0.15s; }
+  header > a:hover {
+    background: #009ed9; }
+  header > a p {
+    display: inline-block; }
+  header > a .nav-arrow {
+    position: absolute;
+    bottom: -15px;
+    width: 30px;
+    height: 20px;
+    color: #00aeef;
+    display: none; }
+  header > a.header-section-active {
+    background: #00aeef; }
+    header > a.header-section-active .nav-arrow {
+      display: block; }
+  header > a .nav-arrow-right {
+    right: 40px; }
+  header > a .nav-arrow-left {
+    left: 40px; }
+
+.portfolio-header .header-section-portfolio {
+  float: right; }
+
+.portfolio-header .header-heading {
+  float: left;
+  display: none; }
+  @media screen and (min-width: 992px) {
+    .portfolio-header .header-heading {
+      display: block; } }
+
+main {
+  margin: 0 8px 20px; }
+  main img {
+    width: 100%;
+    display: block; }
+
+h1 {
+  font-weight: bold;
+  font-size: 28px; }
+  @media screen and (min-width: 992px) {
+    h1 {
+      font-size: 36px; } }
+
+.about-content {
+  display: block; }
+  @media screen and (min-width: 768px) {
+    .about-content {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; } }
+  .about-content > div {
+    width: auto;
+    box-sizing: border-box; }
+    @media screen and (min-width: 768px) {
+      .about-content > div {
+        width: 50%; } }
+
+.about-profile {
+  padding: 40px 5% 0;
+  text-align: center;
+  margin: auto; }
+  @media screen and (min-width: 768px) {
+    .about-profile {
+      padding: 70px 5% 0; } }
+  .about-profile img {
+    max-width: 180px;
+    display: inline-block; }
+    @media screen and (min-width: 768px) {
+      .about-profile img {
+        max-width: 500px; } }
+
+.about-info {
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .about-info {
+      padding-top: 90px;
+      text-align: left;
+      padding-right: 5%; } }
+  .about-info .about-text {
+    padding-left: 0; }
+    @media screen and (min-width: 768px) {
+      .about-info .about-text {
+        padding-left: 30px; } }
+  .about-info p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 20px; }
+    @media screen and (min-width: 992px) {
+      .about-info p {
+        max-width: 350px;
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 30px; } }
+    .about-info p span {
+      color: #00aeef;
+      padding-left: 25px; }
+  .about-info .cv {
+    color: #fff;
+    line-height: 50px;
+    background: #008bbf;
+    display: inline-block;
+    padding: 0 45px;
+    border-radius: 30px;
+    margin-top: 40px;
+    transition: background ease 0.15s; }
+    .about-info .cv:hover {
+      background: #009ed9; }
+
+.references {
+  margin-top: 70px;
+  display: block; }
+  @media screen and (min-width: 550px) {
+    .references {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; } }
+  .references li {
+    width: 70%;
+    margin: 20px auto 0; }
+    @media screen and (min-width: 550px) {
+      .references li {
+        margin: 5px;
+        width: auto; } }
+  .references p {
+    margin-top: 5px;
+    padding-top: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center; }
+    .references p span {
+      color: #818181;
+      padding-left: 0; }
+
+.main-heading {
+  font-size: 24px;
+  text-align: center; }
+
+.portfolio-heading {
+  padding: 80px 0 30px;
+  text-align: center; }
+
+#portfolio {
+  padding-top: 40px; }
+
+.portfolio-gallery {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap; }
+  .portfolio-gallery img {
+    box-sizing: border-box;
+    margin: 1% 0.5%;
+    width: 99%;
+    height: 100%;
+    display: block;
+    border: 1px solid #dadada; }
+    @media screen and (min-width: 550px) {
+      .portfolio-gallery img {
+        width: 49%;
+        margin: 0.5%; } }
+    @media screen and (min-width: 992px) {
+      .portfolio-gallery img {
+        width: 24%; } }
+
+.modal-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none; }
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: #000; }
+
+.modal-content-bg {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+.modal-content-container {
+  width: 100%;
+  margin: auto;
+  position: relative; }
+
+.modal-image {
+  text-align: center;
+  max-width: 1000px;
+  max-height: 100vh;
+  margin: auto;
+  padding: 20px 20px;
+  box-sizing: border-box; }
+
+.modal-image img {
+  width: auto;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 95vh; }
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #008bbf;
+  transition: background ease 0.1s; }
+  .arrow:hover {
+    background-color: #00aeef; }
+  .arrow img {
+    position: relative;
+    top: -4px; }
+
+.arrow-prev {
+  left: 20px; }
+  @media screen and (min-width: 992px) {
+    .arrow-prev {
+      left: 50px; } }
+  .arrow-prev img {
+    position: relative;
+    left: -8px; }
+
+.arrow-next {
+  right: 20px; }
+  @media screen and (min-width: 992px) {
+    .arrow-next {
+      right: 50px; } }
+  .arrow-next img {
+    position: relative;
+    left: -2px; }
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #008bbf;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background ease 0.1s; }
+  @media screen and (min-width: 992px) {
+    .close {
+      right: 50px; } }
+  .close:hover {
+    background: #00aeef; }
+  .close img {
+    position: relative;
+    top: 5px; }

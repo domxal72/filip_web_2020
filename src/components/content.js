@@ -49,7 +49,7 @@ function Content() {
         onRequestClose={closeModal}
         style={modalStyles}
       >
-        <Flex onClick={closeModal} borderRadius={5} >
+        <Flex onClick={closeModal} borderRadius={5} justifyContent='center' alignItems='center'>
           <Img src={modalArr[modalDetail]} />
         </Flex>
       </Modal>

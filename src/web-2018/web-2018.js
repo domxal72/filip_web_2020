@@ -1,10 +1,8 @@
 
 import React from 'react';
-import $ from 'jquery';
 
 import './css/style.css'
-// import $ from './js/jquery-3.3.1.min.js'
-import modal from './js/modal.js'
+import cv from './filip-walter-cv.pdf'
 
 import arrDown from './images/arrow_down.png';
 import arrPrev from './images/arrow_prev.png';
@@ -118,21 +116,6 @@ import img100 from './portfolio/100.jpg';
 import img101 from './portfolio/101.jpg';
 import img102 from './portfolio/102.jpg';
 import img103 from './portfolio/103.jpg';
-
-// let arr = []
-
-// for (let i = 0; i <= 103; i++) {
-//   if (i < 10) {
-//     n = '00' + i;
-//   } else if (i < 100) {
-//     n = '0' + i;
-//   } else {
-//     n = i
-//   }
-//   arr.push(`<img src={img${n}} alt="" className="image-list-item" />`)
-// }
-
-// console.log(arr)
 
 export default function Web2018() {
   return (
@@ -274,13 +257,13 @@ export default function Web2018() {
                 Mobile: <span>+420 737 06 06 20</span><br />
                 Skype: <span>filipwalter</span><br />
               </p>
-              <a href="filip-walter-cv.pdf" target="_blank" className="cv">
+              <a href={cv} target="_blank" className="cv">
                 Download CV
               </a>
             </div>
             <ul className="references">
               <li>
-                <a href="http://www.filipwalter.cz/2011" target="_blank">
+                <a href="http://www.filipwalter.cz/decoded" target="_blank">
                   <img src={decoded} alt="" />
                   <p>Tomáš Walter - Decoded <br />
                     <span>(Flash Website)</span>
@@ -320,9 +303,6 @@ export default function Web2018() {
           </div>
         </div>
       </div>
-      {/* <script src={$}></script> */}
-      {/* <script src="js/portfolio.js"></script> */}
-      {/* <script src={modal}></script> */}
     </>
   )
 }
